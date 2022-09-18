@@ -63,5 +63,18 @@ window.addEventListener("load", function(){
     louder.style.display="none";
     
    louder.classList.add("disappear")
-})
+});
+
+const observer= new IntersectionObserver((entries)=>{
+entries.forEach((entry)=>{
+    console.log(entry);
+    if(entry.isIntersecting){
+        entry.target.classList.add("show-fade");
+    }else{
+        entry.target.classList.remove("show-fade");
+    }
+});
+});
+const hidinElements=document.querySelectorAll(".hide-fade");
+hidinElements.forEach((el)=> observer.observe(el));
 

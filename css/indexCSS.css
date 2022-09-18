@@ -83,7 +83,38 @@ body{
     right:20%;
   z-index: 10;
 }
+html{
+    overflow-x: hidden;
+
+}
+@media (max-width:476px){
+    .front-end-skils .skil-f{
+        font-size: 40px !important;
+
+        
+        
+    }
+    .front-end-skils{
+        transform: translateX(-20%);
+    }
+}
 @media (max-width:800px) {
+    .front-end-skils .skil-f{
+        font-size: 20px;
+
+        
+        
+    }
+    .front-end-skils{
+        width: 75vw;
+        
+    }
+    .front-end-skils .skil-f:last-of-type{
+        font-size: 30px !important;
+        vertical-align: middle;
+        text-align: center;
+
+    }
     .title{
         font-size: 1rem !important;
         text-transform: uppercase;  
@@ -104,7 +135,7 @@ body{
         position: fixed;
        left: 0;
         background-color: hsl(0 0% 100% / 0.1);
-        
+        opacity: 1;
         backdrop-filter: blur(1rem);
         transition: all 0.5s ease-out;
         
@@ -119,7 +150,7 @@ body{
     }
     #pr-nav[data-visible="true"]{
         transform: translateX(120%);
-
+         opacity: 0;
     }
     .me {
         margin: 0 !important;
@@ -549,7 +580,113 @@ footer button{
         visibility: hidden;
     }
 }
+.hide-fade{
+    opacity: 0;
+    transition: all 0.5s;
+    filter: blur(5px);
+    
+    transform: translateX(-30%);
+}
+.show-fade{
+    opacity: 1 !important;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+#sec .center-skil{
+    transition-delay: 300ms;
+    
+}
+#sec .skil:nth-child(3){
+    transition-delay: 600ms;
+ 
+}
+/*.normal-skil{
+transform: translate(0);
+}*/
 
 
+.portfolio-container{
+    background: #000;
+    color: #fff;
+}
+.home-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+  
+}
+.home-content img{
+    width: 150px;
+    aspect-ratio: 1;
+    
+    z-index: -10000;
+}
 
+.front-end-skils .skil-f{
+    width: 100px;
+    aspect-ratio: 1;
+    font-size: 4rem;
+    margin: 1%;
+    transform: translateX(0);
+    align-self: center;
+    
+    
+    flex-basis:100px;
+}
+.front-end-skils{
+    display: flex;
+    
+    align-content:space-between;
+    
+    margin-left:auto;
+    margin-right: auto;
+    float: left;
+   
 
+}
+.portfolio img{
+    margin: 0 auto;
+}
+.me{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    align-content: flex-start;
+  
+}
+.baby{
+    margin-left:auto;
+    margin-right: auto;
+    width:75vw;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+.pricing .skil .img{
+    width: 100%;
+}
+.pricing .skil .pixle-character{
+    position: absolute;
+   transform: translate(50%,-50%);
+   
+    max-width: 120px;
+}
+.pricing .center-skil .pixle-character{
+    position: absolute;
+  
+   
+   transform: scale(200%) translate(50%,-50%);
+}
+.pricing .skil .last-pixle-character{
+    position: absolute;
+   transform: scale(60%) translate(-50%,-70%);
+   
+    
+}
